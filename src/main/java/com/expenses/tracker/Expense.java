@@ -1,8 +1,6 @@
-package com.expenses;
+package com.expenses.tracker;
 
 import java.util.Date;
-import java.util.UUID;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,30 +11,19 @@ public class Expense {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private final long id;
-    private final String name;
-    private final double amount;
-    private final Date paymentDate;
+    private long id;
+    private String name;
+    private double amount;
+    private Date paymentDate;
 
     protected Expense() {}
 
-    // Expense() {
-    //     this.id = generateExpenseId();  
-    //     this.name = "";
-    //     this.amount = 0.0;
-    //     this.paymentDate = new Date();
-    // }
 
     Expense(String expenseName, double expenseAmount, Date paid) {
         this.name = expenseName;
         this.amount = expenseAmount;
         this.paymentDate = paid;
     }
-
-    // public static UUID generateExpenseId() {
-    //     UUID uniqueID = UUID.randomUUID();
-    //     return uniqueID;
-    // }
 
     @Override
     public String toString() {
