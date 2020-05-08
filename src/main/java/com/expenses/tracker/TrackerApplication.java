@@ -18,15 +18,6 @@ import org.springframework.context.annotation.Bean;
 @RestController
 public class TrackerApplication {
 
-	@Autowired
-	private ExpenseRepository expenseRepository;
-
-	public TrackerApplication(ExpenseRepository userRepository) {
-		this.expenseRepository = userRepository;
-		//TODO - Remove print, just here to use attribute
-		System.out.println(expenseRepository);
-	  }
-
 
 	//TODO - Implement logging
 	private static final Logger log = LoggerFactory.getLogger(TrackerApplication.class);
