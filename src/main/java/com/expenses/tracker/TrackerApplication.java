@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-// import com.expenses.Expense;
+import com.expenses.Expense;
 
 
 @SpringBootApplication
@@ -23,7 +23,7 @@ public class TrackerApplication {
 	}
 
 	@GetMapping("/newexpense")
-	public String expense(@RequestParam(value = "name") String name) {
+	public String createExpense(@RequestParam(value = "name") String name) {
 	return String.format("New expense logged for %s!", name);
 }
 
