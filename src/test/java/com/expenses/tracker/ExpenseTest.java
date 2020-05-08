@@ -7,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-
 @SpringJUnitConfig
 class ExpenseTest {
 
