@@ -10,7 +10,7 @@ public class Expense {
         private final Date paymentDate;
 
         public Expense(String name, double amount, Date paid) {
-            this.id = setExpenseId();
+            this.id = this.setExpenseId();
             this.name = name;
             this.amount = amount;
             this.paymentDate = paid;
