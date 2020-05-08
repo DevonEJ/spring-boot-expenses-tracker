@@ -59,8 +59,4 @@ class ExpenseTest {
 		assertEquals(expectedOutput, testExpense.toString(), "Incorrect expense details string returned.");
 	}
 
-
-
-
-
 }
