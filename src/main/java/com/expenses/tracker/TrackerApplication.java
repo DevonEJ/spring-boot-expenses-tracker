@@ -17,6 +17,7 @@ import org.springframework.context.annotation.Bean;
 @RestController
 public class TrackerApplication {
 
+	//TODO - Implement logging
 	private static final Logger log = LoggerFactory.getLogger(TrackerApplication.class);
 
 	public static void main(String[] args) {
