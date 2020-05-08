@@ -13,7 +13,7 @@ public class Expense {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private final UUID id;
+    private final long id;
     private final String name;
     private final double amount;
     private final Date paymentDate;
@@ -28,16 +28,15 @@ public class Expense {
     // }
 
     Expense(String expenseName, double expenseAmount, Date paid) {
-        this.id = generateExpenseId();
         this.name = expenseName;
         this.amount = expenseAmount;
         this.paymentDate = paid;
     }
 
-    public static UUID generateExpenseId() {
-        UUID uniqueID = UUID.randomUUID();
-        return uniqueID;
-    }
+    // public static UUID generateExpenseId() {
+    //     UUID uniqueID = UUID.randomUUID();
+    //     return uniqueID;
+    // }
 
     @Override
     public String toString() {
@@ -46,17 +45,23 @@ public class Expense {
           id, name, amount, paymentDate);
     }
 
-    public UUID getId() {
+    public long getId() {
         return id;
       }
     
-      public String getFirstName() {
-        return firstName;
+      public String getName() {
+        return name;
       }
     
-      public String getLastName() {
-        return lastName;
+      public double getAmount() {
+        return amount;
       }
+
+      public Date getPaymentDate() {
+        return paymentDate;
+      }
+
+
 
 
     public static void main(String[] args) {
