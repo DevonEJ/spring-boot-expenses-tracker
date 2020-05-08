@@ -49,20 +49,18 @@ public class Expense {
       }
 
 
-
-
     public static void main(String[] args) {
 
-        Date date = new Date();  
+        // Date date = new Date();  
 
-        Expense test = new Expense();
-        System.out.println(test.id);
+        // Expense test = new Expense();
+        // System.out.println(test.id);
 
 
-        Expense myExpense = new Expense("food", 20.00, date);
-        System.out.println(myExpense.amount);
-        System.out.println(myExpense.paymentDate);
-        System.out.println(myExpense.name);
+        // Expense myExpense = new Expense("food", 20.00, date);
+        // System.out.println(myExpense.amount);
+        // System.out.println(myExpense.paymentDate);
+        // System.out.println(myExpense.name);
 
 
     }
