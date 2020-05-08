@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.context.annotation.Bean;
 
-import java.util.Date;
-
 //import com.expenses.tracker.Expense;
 
 
@@ -46,10 +44,9 @@ public class TrackerApplication {
 	@Bean
   	public CommandLineRunner demo(ExpenseRepository repository) {
     return (args) -> {
-	  Date date = new Date();
 	  
-	  repository.save(new Expense("lunch", 15.00, date));
-	  repository.save(new Expense("cinema", 25.00, date));
+	  repository.save(new Expense("lunch", "15.00", "date"));
+	  repository.save(new Expense("cinema", "25.00", "date"));
      
       log.info("Expenses found with findAll():");
       log.info("-------------------------------");

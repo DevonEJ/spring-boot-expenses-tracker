@@ -1,6 +1,6 @@
 package com.expenses.tracker;
 
-import java.util.Date;
+// import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,13 +13,13 @@ public class Expense {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     private String name;
-    private double amount;
-    private Date paymentDate;
+    private String amount;
+    private String paymentDate;
 
     protected Expense() {}
 
 
-    Expense(String expenseName, double expenseAmount, Date paid) {
+    Expense(String expenseName, String expenseAmount, String paid) {
         this.name = expenseName;
         this.amount = expenseAmount;
         this.paymentDate = paid;
@@ -40,11 +40,11 @@ public class Expense {
         return name;
       }
     
-      public double getAmount() {
+      public String getAmount() {
         return amount;
       }
 
-      public Date getPaymentDate() {
+      public String getPaymentDate() {
         return paymentDate;
       }
 
