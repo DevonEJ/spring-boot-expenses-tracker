@@ -46,6 +46,18 @@ public class Expense {
           id, name, amount, paymentDate);
     }
 
+    public UUID getId() {
+        return id;
+      }
+    
+      public String getFirstName() {
+        return firstName;
+      }
+    
+      public String getLastName() {
+        return lastName;
+      }
+
 
     public static void main(String[] args) {
 
