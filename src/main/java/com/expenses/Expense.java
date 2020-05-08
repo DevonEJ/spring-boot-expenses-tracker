@@ -1,27 +1,49 @@
 package com.expenses;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Expense {
 
-        private final long id;
+        private final UUID id;
         private final String name;
         private final double amount;
         private final Date paymentDate;
 
-        public Expense(String name, double amount, Date paid) {
-            this.id = this.setExpenseId();
-            this.name = name;
-            this.amount = amount;
+        Expense() {
+            this.id = generateExpenseId();  
+            this.name = "";
+            this.amount = 0.0;
+            this.paymentDate = new Date();
+        }
+
+        Expense(String expenseName, double expenseAmount, Date paid) {
+            this.id = generateExpenseId();
+            this.name = expenseName;
+            this.amount = expenseAmount;
             this.paymentDate = paid;
         }
     
-        public long setExpenseId() {
-            return id;
+        public static UUID generateExpenseId() {
+            UUID uniqueID = UUID.randomUUID();
+            return uniqueID;
         }
-    
-        public long getId() {
-            return id;
+
+
+        public static void main(String[] args) {
+
+            Date date = new Date();  
+
+            Expense test = new Expense();
+            System.out.println(test.id);
+
+
+            Expense myExpense = new Expense("food", 20.00, date);
+            System.out.println(myExpense.amount);
+            System.out.println(myExpense.paymentDate);
+            System.out.println(myExpense.name);
+
+
         }
     
     
